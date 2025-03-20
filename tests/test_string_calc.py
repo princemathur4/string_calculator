@@ -15,7 +15,6 @@ class TestStringCalc:
         calc_obj = StringCalc()
         assert calc_obj.add("") == 0
 
-
     def test_add_1_2_input(self):
         calc_obj = StringCalc()
         assert calc_obj.add("1,2") == 3
@@ -24,3 +23,6 @@ class TestStringCalc:
         calc_obj = StringCalc()
         assert calc_obj.add("3,4") == 7
 
+    def test_add_1_2_3_input(self):
+        calc_obj = StringCalc()
+        assert calc_obj.add("1\n2,3") == 6
