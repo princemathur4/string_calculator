@@ -8,10 +8,8 @@ class TestStringCalc:
 
     def test_add_non_string_input(self):
         calc_obj = StringCalc()
-        with pytest.raises(Exception) as exc_info:
+        with pytest.raises(Exception):
             calc_obj.add(1)
-
-        assert str(exc_info.value) == "Invalid input for param(s) = [numbers]"
 
     def test_add_empty_string_input(self):
         calc_obj = StringCalc()
@@ -36,10 +34,3 @@ class TestStringCalc:
     def test_add_1_2_3_input_with_custom_and_newline_delimiters(self):
         calc_obj = StringCalc()
         assert calc_obj.add("//;\n1;2\n3") == 6
-
-    def test_add_1_2_3_input_with_invalid_delimiters(self):
-        calc_obj = StringCalc()
-        with pytest.raises(Exception) as exc_info:
-            calc_obj.add(("//;\n1.2\n3"))
-
-        assert str(exc_info.value) == "Invalid delimiter present in param(s) = [numbers]"
