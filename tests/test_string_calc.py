@@ -27,6 +27,10 @@ class TestStringCalc:
         calc_obj = StringCalc()
         assert calc_obj.add("1\n2,3") == 6
 
-    def test_add_1_2_3_input_with_different_delimiters(self):
+    def test_add_1_2_input_with_custom_delimiters(self):
         calc_obj = StringCalc()
         assert calc_obj.add("//;\n1;2") == 3
+
+    def test_add_1_2_3_input_with_custom_and_newline_delimiters(self):
+        calc_obj = StringCalc()
+        assert calc_obj.add("//;\n1;2\n3") == 6
