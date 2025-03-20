@@ -2,7 +2,7 @@ class StringCalc:
     @staticmethod
     def add(numbers: str) -> int:
         if not isinstance(numbers, str):
-            raise Exception("Invalid input - [numbers]")
+            raise Exception("Invalid input for param(s) = [numbers]")
 
         if not numbers:
             return 0
@@ -13,4 +13,9 @@ class StringCalc:
             numbers = "\n".join(numbers.split("\n")[1:])
 
         numbers = numbers.replace("\n", delimiter)
-        return sum(map(int, numbers.split(delimiter)))
+        try:
+            res = sum(map(int, numbers.split(delimiter)))
+        except ValueError:
+            raise Exception("Invalid delimiter present in param(s) = [numbers]")
+
+        return res
