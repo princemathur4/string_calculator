@@ -4,3 +4,5 @@ class StringCalc:
         if not isinstance(numbers, str):
             raise Exception("Invalid input - [numbers]")
 
+        if numbers == "":
+            return 0
