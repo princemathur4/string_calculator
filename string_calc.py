@@ -1,3 +1,4 @@
 class StringCalc:
-    pass
-
+    @staticmethod
+    def add(numbers: str) -> int:
+        pass
