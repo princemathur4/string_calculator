@@ -21,5 +21,6 @@ class StringCalc:
 
         negative_numbers = list(filter(lambda num: num < 0, numbers_list))
         if negative_numbers:
-            raise Exception(f"Negative numbers not allowed: [{negative_numbers[0]}]")
+            negative_numbers = negative_numbers.__str__().replace(' ', '')
+            raise Exception(f"Negative numbers not allowed: {negative_numbers}")
         return sum(numbers_list)
