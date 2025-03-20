@@ -4,8 +4,4 @@ class StringCalc:
         if not isinstance(numbers, str):
             raise Exception("Invalid input - [numbers]")
 
-        if numbers == "":
-            return 0
-
-        if numbers == "1,2":
-            return 3
+        return sum(map(int, numbers.split(",")))
