@@ -13,13 +13,9 @@ class StringCalc:
             numbers = "\n".join(numbers.split("\n")[1:])
 
         numbers = numbers.replace("\n", delimiter)
-
         try:
-            numbers_list = list(map(int, numbers.split(delimiter)))
+            res = sum(map(int, numbers.split(delimiter)))
         except ValueError:
             raise Exception("Invalid delimiter present in param(s) = [numbers]")
 
-        negative_numbers = list(filter(lambda num: num < 0, numbers_list))
-        if negative_numbers:
-            raise Exception(f"Negative numbers not allowed: [{negative_numbers[0]}]")
-        return sum(numbers_list)
+        return res
