@@ -44,7 +44,7 @@ class TestStringCalc:
 
         assert str(exc_info.value) == "Invalid delimiter present in param(s) = [numbers]"
 
-    def test_add_single_negative_numbers(self):
+    def test_add_single_negative_number(self):
         calc_obj = StringCalc()
         with pytest.raises(Exception) as exc_info:
             calc_obj.add("//=\n1=-2\n3")
