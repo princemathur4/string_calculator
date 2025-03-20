@@ -20,7 +20,3 @@ class TestStringCalc:
         calc_obj = StringCalc()
         assert calc_obj.add("1,2") == 3
 
-    def test_add_3_4_input(self):
-        calc_obj = StringCalc()
-        assert calc_obj.add("3,4") == 3
-
