@@ -7,10 +7,5 @@ class StringCalc:
         if not numbers:
             return 0
 
-        delimiter = ","
-        if numbers.startswith("//"):
-            delimiter = numbers.split("\n")[0].lstrip("//")
-            numbers = "\n".join(numbers.split("\n")[1:])
-
-        numbers = numbers.replace("\n", delimiter)
-        return sum(map(int, numbers.split(delimiter)))
+        numbers = numbers.replace("\n", ",")
+        return sum(map(int, numbers.split(",")))
