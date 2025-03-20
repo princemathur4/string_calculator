@@ -10,3 +10,8 @@ class TestStringCalc:
         calc_obj = StringCalc()
         with pytest.raises(Exception):
             calc_obj.add(1)
+
+    def test_add_empty_string_input(self):
+        calc_obj = StringCalc()
+        assert calc_obj.add("") == 0
+
