@@ -6,6 +6,3 @@ class StringCalc:
 
         if numbers == "":
             return 0
-
-        if numbers == "1,2":
-            return 3
