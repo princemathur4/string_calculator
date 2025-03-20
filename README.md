@@ -14,11 +14,15 @@ Implemented in TDD fashion (Test driven development)
 ## Instructions to run:
 - Install Python3.10 
 - Install dependencies from requirements.txt file using this command: `pip install -r requirements.txt`
-- Run code via: `StringCalc.add("<string containing numbers>")` 
+- Run code via: 
+```
+from string_calc import StringCalc
+StringCalc.add("<string containing numbers>")
+``` 
 - Run tests via: `pytest test_string_calc.py`
 
 ## How is it tested?
-- [x] Unit Tested
+- [x] Unit Tested using pytest library
 
 ### Testcases
 - [x] **Method existence** → Ensures the `add` method exists in `StringCalc`.  
